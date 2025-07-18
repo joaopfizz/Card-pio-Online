@@ -7,7 +7,7 @@ export default function PratoDetailsScreen({ route }) {
   const [prato, setPrato] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://<SEU_IP>:3001/pratos/${id}`)
+    axios.get(`http://<IP>:3001/pratos/${id}`)
       .then(res => setPrato(res.data))
       .catch(err => console.error(err));
   }, []);
