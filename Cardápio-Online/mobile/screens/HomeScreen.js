@@ -6,7 +6,7 @@ const HomeScreen = ({ navigation }) => {
   const [pratos, setPratos] = useState([]);
 
   useEffect(() => {
-    axios.get('http://<SEU_IP>:3001/pratos')
+    axios.get('http://<IP>:3001/pratos')
       .then(res => setPratos(res.data))
       .catch(err => console.error(err));
   }, []);
