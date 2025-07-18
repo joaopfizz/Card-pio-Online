@@ -6,7 +6,7 @@ export default function AddPratoScreen({ navigation }) {
   const [form, setForm] = useState({ nome: '', descricao: '', preco: '', disponivel: true, categoria: '' });
 
   const handleSubmit = () => {
-    axios.post('http://<SEU_IP>:3001/pratos', { ...form, preco: parseFloat(form.preco) })
+    axios.post('http://<IP>:3001/pratos', { ...form, preco: parseFloat(form.preco) })
       .then(() => navigation.goBack())
       .catch(err => console.error(err));
   };
